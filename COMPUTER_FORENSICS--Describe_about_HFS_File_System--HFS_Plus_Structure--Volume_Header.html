@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Volume Header</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Volume Header</h1><br/>• Each HFS Plus Volume contains Volume Header 1024 bytes from start of volume<br />• Volume Header analogous to Master Directory Block (MDB) for HFS containing information about volume as whole which includes location of other key structure in volume<br />• Copy of Volume Header, Alternate Volume Header is stored starting 1024 bytes before the end of volume<br />• Implementation should update this copy when length or location of one special file changes<br />• Alternate Volume Header is intended for disk repair utilities<br />• First 1024 bytes and Last 512 bytes of volume header are reserved<br />• First 1024 bytes are used for boot block<br />• Traditional Mac OS Finder will write to System Folder Changes<br />• Last 512 bytes were used during Apple CPU manufacturing process<br />• Alternate Volume Header is always stored at offset 1024 bytes from end of volume<br />• If disk size is not even multiple of allocation of block size the area may lie beyond last allocation block<br />• Last allocation block is still reserved if Alternate Volume Header is not stored  <br />• Allocation block containing first 1536 bytes (1024 Volume Header + 512 Reserved Space) are marked as used in Allocation File<br />• To accommodate AVH and reserved space, the last allocation block is marked as used in allocation file<br />• Volume Header is described by HFS Plus Volume Header type<br /></div>
+</body>
+</html>

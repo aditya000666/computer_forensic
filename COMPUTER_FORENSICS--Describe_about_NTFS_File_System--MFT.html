@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>MFT</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>MFT</h1><br/>• MFT is a file<br />• MFT has entry of itself<br />• First entry in table is named $MFT and describes on-disk location of MFT<br />• Starting location of MFT is given in boot sector which is located in first sector of file system<br />• Microsoft does not delete MFT entries after they have been created<br />• Size of MFT is defined in boot sector (1024 bytes)<br />• First 42 bytes contain 12 fields and remaining 982 bytes are unstructured and filled with attributes<br />• First field in MFT is signature and standard entry will have ASCII  <br />• If error found in entry the string entry is “BAD”<br />• There is flag field that identifies if entry is being used and if entry is for directory<br />• If file cannot fit attributes in one entry, use multiple entries<br />• When this occurs, first entry is called Base File Record or Base MFT Entry<br />• Nearly every allocated MFT entry has $FILENAME and $STANDARD_INFORMATION<br />• $FILENAME contains filename, size and temporal information<br />• $STANDARD_INFORMATION attribute contains temporal, ownership and security information<br />• Every file has $DATA attribute which contains file content. If content is 700 bytes, it becomes nonresident and saved in external cluster<br />• File with more than one $DATA attribute, additional attributes are referred to as Alternate Data Streams (ADS)<br />• NTFS provides capability for attribute contents to be encrypted<br />• When attribute encrypted, only content is encrypted and attribute header is not<br />• $LOGGED_UTILITY_STREAM attribute is created for file and contain keys needed to decrypt the data<br /></div>
+</body>
+</html>

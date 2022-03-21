@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Double Indirect Block</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Double Indirect Block</h1><br/>• If size of file is greater than 4MB + 48K, then inode will start using Double Indirect Block pointer to address data blocks.<br />• Double Indirect block will point to block that comes after 4MB + 48K which will point to blocks where data is stored<br />• Double indirect pointer can address 1024 Indirect block pointers (1024 * 4M=4TB) of file size<br />• The 15th block pointer in inode will point to block just after 4G of data which will point to 1024 Double Indirect Block Pointer<br /></div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>FAT Layout</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>FAT Layout</h1><br/>• First section is Reserved area, and includes data in file system category.<br />• FAT12 and FAT16 in this area is typically only 1 sector in size but size is defined in boot sector<br />• Second section is FAT area and contains the primary and backup FAT structure.<br />• It starts in sector following the reserved area and size is calculated based on number and size of FAT structures<br />• Third section is Data area, where the clusters that will be allocated to store file and directory content<br />• In a FAT File System, the file system category of data can be found In boot sector data structure<br />• Boot sector is located in first sector of volume and is part of reserved area of file system<br />• There is no field that identifies the file system as FAT12, FAT16 &amp; FAT32<br />• Type can be determined by performing calculations from boot sector data<br />• FAT32 file system boot sector contains additional data including the sector address of backup copy of boot sector and major and minor version number<br />• The backup copy of boot sector can be used if version in sector 0 becomes corrupt, and Microsoft documentation says that it should always be in sector 6 that tools can automatically find it if the default copy goes bad<br />• FAT32 file systems also have FSINFO data structure that contains information about location of next available cluster and total amount of free clusters<br /></div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Describe about HFS File System</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Describe about HFS File System</h1><br/>• HFS Volume format for MAC OS<br />• HFS Plus introduced for Mac OS 8.1<br />• Architecturally similar to HFS<br />• HFS Plus is specification of how a volume exists on disk<br />• Managed the files that contain user data, along with structure to retrieve the data<br />• The storage space on disk is divided into units called sectors<br />• Sector is smallest part of disk that disk driver software will read or write in single operation<br />• Size of sector is based on way of data physically laid on disk<br />• For hard disks, sector is 512 bytes<br />• For optical media, sector is 2048 bytes<br />• Data structure on HFS Plus does not depend on size of structure with exception of journal<br />• Journal rely on accessing individual sectors, sector size is stored in jhdr_size field of journal header (if volume has journal)<br />• HFS Plus allocates space in units allocation blocks which is group of consecutive bytes<br />• Size of allocation block is power of 2, greater than or equal to 512<br />• Value cannot be changed until volume in reinitialised<br />• Allocation blocks are identified by 32 bit allocation block number<br />• Current implementation of file system are optimised for 4K<br /></div>
+</body>
+</html>

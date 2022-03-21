@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Describe Ext3 File System</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Describe Ext3 File System</h1><br/>• Enhanced Ext2  <br />• To be journaling filesystem<br />• Compatible with old Ext2 filesystem<br />• Idea behind Ext3 journaling is to perform each high-level change to file system<br />• Copy of blocks to be written is stored in journal<br />• When I/O data transfer to journal is completed the blocks are written in filesystem<br />• When I/O data transfer to filesystem terminates the copies of blocks in journal are discarded<br />• File system data and metadata changes are logged into journal<br />• This minimises the chance of losing the updates made to each file but requires many additional disk access<br />• When new file is created all data blocks must be duplicated as log records<br />• Journaling filesystem maintains special file called journal that is used to repair inconsistencies that occur as result of improper shutdown of computer<br /><br /><br /><a href=""><img src="images/39-1.png" alt="images/39-1.png" /></a><br /><br /></div>
+</body>
+</html>
